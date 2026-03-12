@@ -1,16 +1,57 @@
-# React + Vite
+# Portfolio profesional – Noelia Pires
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio web desarrollado con React + Vite como proyecto académico de ASIR, orientado a mostrar competencias en administración de sistemas, soporte IT, redes, virtualización y desarrollo web.
 
-Currently, two official plugins are available:
+## Objetivo del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Crear un portfolio técnico interactivo, para presentar habilidades, proyectos y perfil profesional de forma visual, clara y moderna.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- CSS
+- Tailwind CSS
+- JavaScript
+- Git y GitHub
 
-## Expanding the ESLint configuration
+## Secciones principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Header
+- Perfil Técnico
+- Competencias Técnicas
+- Proyectos
+- Herramientas
+- Certificaciones
+- Metodología
+- Experiencia
+- Contacto
+
+## Características visuales
+
+- Diseño futurista con glow tecnológico
+- Fondo animado
+- Efectos hover interactivos
+- Tarjetas flip
+- Animaciones suaves
+- Estética inspirada en interfaces tecnológicas
+
+## Animaciones e interactividad
+
+El portfolio incluye animaciones dinámicas inspiradas en efectos interactivos tipo "Google Antigravity", que aportan una experiencia visual más inmersiva y moderna.
+
+Entre ellas:
+
+- Elementos interactivos que reaccionan al usuario
+
+- Animaciones de movimiento y transición
+
+- Efectos visuales dinámicos para mejorar la experiencia de navegación
+
+Estas animaciones buscan simular interfaces tecnológicas modernas y aportar dinamismo al portfolio.
+
+## Cómo ejecutar el proyecto
+
+```bash
+npm install
+npm run dev
