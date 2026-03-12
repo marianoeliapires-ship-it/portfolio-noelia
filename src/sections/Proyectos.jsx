@@ -1,113 +1,115 @@
+import { useState } from "react"
+
+import virtualizacion from "../assets/projects/virtualizacion.png"
+import activeDirectory from "../assets/projects/active-directory.png"
+import tablaHtml from "../assets/projects/tabla-html.png"
+import formularioHtml from "../assets/projects/formulario-html.png"
+
 export default function Proyectos() {
+
+    const [active, setActive] = useState(null)
+
+    const toggle = (i) => {
+
+        if (active === i) {
+            setActive(null)
+        } else {
+            setActive(i)
+        }
+
+    }
+
+    const proyectos = [
+
+        {
+            titulo: "Virtualización",
+            descripcion: "Implementación de entorno virtualizado para pruebas y simulaciones.",
+            detalle: "Configuración de máquina virtual.",
+            tecnologias: "VirtualBox · Ubuntu 20.04 · Windows 10 Home",
+            resultado: "Entorno funcional para pruebas y simulaciones.",
+            imagen: virtualizacion
+        },
+
+        {
+            titulo: "Active Directory",
+            descripcion: "Administración de dominio en Windows Server.",
+            detalle: "Configuración y gestión de usuarios dentro de Active Directory en entorno de dominio.",
+            tecnologias: "Windows Server · Active Directory",
+            resultado: "Gestión de grupos y permisos.",
+            imagen: activeDirectory
+        },
+
+        {
+            titulo: "Maquetación web - Tabla estructurada",
+            descripcion: "Estructuración de contenido mediante tablas.",
+            detalle: "Estructura de diseño y tabla web.",
+            tecnologias: "HTML · CSS",
+            resultado: "Contenido organizado en tabla con estilo.",
+            imagen: tablaHtml
+        },
+
+        {
+            titulo: "Desarrollo web - Formulario de compra",
+            descripcion: "Desarrollo de formulario interactivo.",
+            detalle: "Diseño y maquetación con validación básica de campos.",
+            tecnologias: "HTML · CSS",
+            resultado: "Recopilación de datos y navegación entre páginas.",
+            imagen: formularioHtml
+        }
+
+    ]
 
     return (
 
-        <section className="h-screen flex flex-col items-center justify-center text-white px-10">
+        <section>
 
-            <h2 className="text-4xl font-bold mb-12 text-center tech-title">
-                4. Proyectos
+            <h2 className="text-6xl tech-title mb-10">
+                4. PROYECTOS
             </h2>
 
-            <div className="max-w-6xl grid md:grid-cols-2 gap-8">
+            <div className="projects-grid">
 
-                <div className="project-card">
+                {proyectos.map((p, i) => (
 
-                    <h3 className="text-xl font-semibold mb-2">
-                        Virtualización
-                    </h3>
+                    <div
+                        key={i}
+                        className={`flip-card ${active === i ? "active" : ""}`}
+                        onClick={() => toggle(i)}
+                    >
 
-                    <p>
-                        Implementación de entorno virtualizado para pruebas y simulaciones.
-                    </p>
+                        <div className="flip-inner">
 
-                    <p className="mt-2">
-                        <strong>Descripción:</strong> Configuración de máquina virtual.
-                    </p>
+                            <div className="flip-front">
 
-                    <p className="mt-2 code-style">
-                        <strong>Tecnologías:</strong> VirtualBox · Ubuntu 20.04 · Windows 10 Home
-                    </p>
+                                <h3>{p.titulo}</h3>
 
-                    <p className="mt-2">
-                        <strong>Resultado:</strong> Entorno funcional para pruebas y simulaciones.
-                    </p>
+                                <p>{p.descripcion}</p>
 
-                </div>
+                                <p className="mt-2">
+                                    <strong>Descripción:</strong> {p.detalle}
+                                </p>
 
+                                <p className="code-style mt-3">
+                                    {p.tecnologias}
+                                </p>
 
-                <div className="project-card">
+                                <p className="mt-2">
+                                    <strong>Resultado:</strong> {p.resultado}
+                                </p>
 
-                    <h3 className="text-xl font-semibold mb-2">
-                        Active Directory
-                    </h3>
+                            </div>
 
-                    <p>
-                        Administración de dominio en Windows Server.
-                    </p>
+                            <div className="flip-back">
 
-                    <p className="mt-2">
-                        <strong>Descripción:</strong> Configuración y gestión de usuarios dentro de Active Directory en entorno de dominio.
-                    </p>
+                                <img src={p.imagen} />
 
-                    <p className="mt-2 code-style">
-                        <strong>Tecnologías:</strong> Windows Server · Active Directory
-                    </p>
+                            </div>
 
-                    <p className="mt-2">
-                        <strong>Resultado:</strong> Gestión de grupos y permisos. Organización estructurada de usuarios y asignación de membresías dentro del dominio.
-                    </p>
+                        </div>
 
-                </div>
+                    </div>
 
-
-                <div className="project-card">
-
-                    <h3 className="text-xl font-semibold mb-2">
-                        Maquetación web - Tabla estructurada
-                    </h3>
-
-                    <p>
-                        Estructuración de contenido mediante tablas.
-                    </p>
-
-                    <p className="mt-2">
-                        <strong>Descripción:</strong> Estructura de diseño y tabla web.
-                    </p>
-
-                    <p className="mt-2 code-style">
-                        <strong>Tecnologías:</strong> HTML · CSS
-                    </p>
-
-                    <p className="mt-2">
-                        <strong>Resultado:</strong> Contenido organizado en tabla con estilo.
-                    </p>
-
-                </div>
-
-
-                <div className="project-card">
-
-                    <h3 className="text-xl font-semibold mb-2">
-                        Desarrollo Web - Formulario de compra
-                    </h3>
-
-                    <p>
-                        Desarrollo de formulario interactivo en HTML.
-                    </p>
-
-                    <p className="mt-2">
-                        <strong>Descripción:</strong> Diseño y maquetación de formulario de compra con validación básica de campos.
-                    </p>
-
-                    <p className="mt-2 code-style">
-                        <strong>Tecnologías:</strong> HTML · CSS
-                    </p>
-
-                    <p className="mt-2">
-                        <strong>Resultado:</strong> Estructura funcional con recopilación de datos y navegación entre páginas.
-                    </p>
-
-                </div>
+                ))}
 
             </div>
 
