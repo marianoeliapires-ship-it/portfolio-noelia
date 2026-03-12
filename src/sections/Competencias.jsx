@@ -1,67 +1,68 @@
-export default function Competencias() {
+import React from "react";
+import soporteRemoto from "../assets/competencias/soporte-remoto.png";
+import redes from "../assets/competencias/redes.png";
+import virtualizacion from "../assets/competencias/virtualizacion.png";
+import administracionSistemas from "../assets/competencias/administracion-sistemas.png";
 
+const competencias = [
+    {
+        titulo: "Administración de sistemas",
+        imagen: administracionSistemas,
+        claseImagen: "img-admin",
+        items: ["CMD", "PowerShell", "Active Directory", "Windows Server"],
+    },
+    {
+        titulo: "Redes",
+        imagen: redes,
+        claseImagen: "img-redes",
+        items: ["Configuración TCP/IP", "DNS", "DHCP", "Resolución de incidencias"],
+    },
+    {
+        titulo: "Virtualización",
+        imagen: virtualizacion,
+        claseImagen: "img-virtualizacion",
+        items: ["VirtualBox", "VMware", "Creación de máquinas virtuales"],
+    },
+    {
+        titulo: "Soporte remoto",
+        imagen: soporteRemoto,
+        claseImagen: "img-soporte",
+        items: ["Asistencia técnica", "Acceso remoto", "Diagnóstico", "Resolución de incidencias"],
+    },
+];
+
+const Competencias = () => {
     return (
-
-        <section className="h-screen flex flex-col items-center justify-center text-white px-10">
-
-            <h2 className="text-4xl font-bold mb-12">
-                2. Competencias Técnicas
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
-
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl font-semibold mb-3">
-                        Sistemas
-                    </h3>
-
-                    <ul className="space-y-1">
-                        <li>Gestión de dominios</li>
-                        <li>Políticas GPO</li>
-                        <li>Active Directory</li>
-                        <li>Windows Server</li>
-                    </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl font-semibold mb-3">
-                        Redes
-                    </h3>
-
-                    <ul className="space-y-1">
-                        <li>Configuración TCP/IP</li>
-                        <li>DNS / DHCP</li>
-                        <li>Modelo OSI</li>
-                        <li>Resoluvión de incidencias</li>
-                    </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl font-semibold mb-3">
-                        Virtualización
-                    </h3>
-
-                    <ul className="space-y-1">
-                        <li>VirtualBox/VMware</li>
-                        <li>Creación y gestión de máquinas virtuales</li>
-                    </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl font-semibold mb-3">
-                        Tecnologías web
-                    </h3>
-
-                    <ul className="space-y-1">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                </div>
-
+        <section id="competencias" className="competencias-section">
+            <div className="competencias-header">
+                <h2 className="competencias-title">2. Competencias Técnicas</h2>
             </div>
 
+            <div className="competencias-grid">
+                {competencias.map((comp, index) => (
+                    <article className="competencia-card antigravity-card" key={index}>
+                        <div className="competencia-image-wrap">
+                            <img
+                                src={comp.imagen}
+                                alt={comp.titulo}
+                                className={`competencia-image ${comp.claseImagen}`}
+                            />
+                        </div>
+
+                        <div className="competencia-content">
+                            <h3>{comp.titulo}</h3>
+
+                            <ul>
+                                {comp.items.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </article>
+                ))}
+            </div>
         </section>
+    );
+};
 
-    )
-
-}
+export default Competencias;
