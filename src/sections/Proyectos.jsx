@@ -9,14 +9,13 @@ export default function Proyectos() {
 
     const [active, setActive] = useState(null)
 
-    const toggle = (i) => {
+    const abrir = (i) => {
+        setActive(i)
+    }
 
-        if (active === i) {
-            setActive(null)
-        } else {
-            setActive(i)
-        }
-
+    const cerrar = (e) => {
+        e.stopPropagation()
+        setActive(null)
     }
 
     const proyectos = [
@@ -33,14 +32,14 @@ export default function Proyectos() {
         {
             titulo: "Active Directory",
             descripcion: "Administración de dominio en Windows Server.",
-            detalle: "Configuración y gestión de usuarios dentro de Active Directory en entorno de dominio.",
+            detalle: "Configuración y gestión de usuarios dentro de Active Directory.",
             tecnologias: "Windows Server · Active Directory",
             resultado: "Gestión de grupos y permisos.",
             imagen: activeDirectory
         },
 
         {
-            titulo: "Maquetación web - Tabla estructurada",
+            titulo: "Maquetación web",
             descripcion: "Estructuración de contenido mediante tablas.",
             detalle: "Estructura de diseño y tabla web.",
             tecnologias: "HTML · CSS",
@@ -49,9 +48,9 @@ export default function Proyectos() {
         },
 
         {
-            titulo: "Desarrollo web - Formulario de compra",
+            titulo: "Formulario de compra",
             descripcion: "Desarrollo de formulario interactivo.",
-            detalle: "Diseño y maquetación con validación básica de campos.",
+            detalle: "Diseño con validación básica de campos.",
             tecnologias: "HTML · CSS",
             resultado: "Recopilación de datos y navegación entre páginas.",
             imagen: formularioHtml
@@ -74,8 +73,14 @@ export default function Proyectos() {
                     <div
                         key={i}
                         className={`flip-card ${active === i ? "active" : ""}`}
-                        onClick={() => toggle(i)}
+                        onClick={() => abrir(i)}
                     >
+
+                        {active === i && (
+                            <button className="close-btn" onClick={cerrar}>
+                                ✕
+                            </button>
+                        )}
 
                         <div className="flip-inner">
 
@@ -85,15 +90,15 @@ export default function Proyectos() {
 
                                 <p>{p.descripcion}</p>
 
-                                <p className="mt-2">
+                                <p>
                                     <strong>Descripción:</strong> {p.detalle}
                                 </p>
 
-                                <p className="code-style mt-3">
+                                <p className="code-style">
                                     {p.tecnologias}
                                 </p>
 
-                                <p className="mt-2">
+                                <p>
                                     <strong>Resultado:</strong> {p.resultado}
                                 </p>
 

@@ -8,6 +8,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BASE */
+
 html,
 body {
   height: 100%;
@@ -15,6 +17,8 @@ body {
   background: radial-gradient(circle at 20% 30%, #5a1c9c, #21003f);
   color: white;
 }
+
+/* SECCIONES */
 
 main {
   height: 100vh;
@@ -25,18 +29,21 @@ main {
 }
 
 section {
-  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 80px 0;
+  text-align: center;
 }
+
+/* TIPOGRAFÍA */
 
 .tech-title {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 2px;
-  text-align: center;
 }
 
 .code-style {
@@ -47,12 +54,13 @@ section {
 
 .projects-grid {
 
-  width: 92vw;
+  width: 90vw;
   max-width: 1400px;
 
   display: grid;
 
   grid-template-columns: 1fr 1fr;
+
   gap: 40px;
 
 }
@@ -62,12 +70,28 @@ section {
 .flip-card {
 
   width: 100%;
-  height: 300px;
+  height: 320px;
 
-  perspective: 2000px;
+  perspective: 1500px;
   cursor: pointer;
 
+  transition: transform .3s;
+
 }
+
+/* HOVER FUTURISTA */
+
+.flip-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 213, 0.6),
+    0 0 40px rgba(0, 255, 213, 0.3);
+
+}
+
+/* INTERIOR */
 
 .flip-inner {
 
@@ -80,20 +104,7 @@ section {
 
 }
 
-.flip-card.active {
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  width: 85vw;
-  height: 85vh;
-
-  z-index: 1000;
-
-}
+/* GIRO */
 
 .flip-card.active .flip-inner {
 
@@ -101,10 +112,13 @@ section {
 
 }
 
+/* CARAS */
+
 .flip-front,
 .flip-back {
 
   position: absolute;
+
   width: 100%;
   height: 100%;
 
@@ -118,41 +132,32 @@ section {
   align-items: center;
 
   padding: 40px;
+
   text-align: center;
 
 }
+
+/* FRENTE */
 
 .flip-front {
 
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(12px);
 
 }
 
-.flip-front h3 {
-
-  font-size: 28px;
-  margin-bottom: 15px;
-
-}
-
-.flip-front p {
-
-  font-size: 16px;
-  line-height: 1.6;
-
-}
+/* DETRÁS */
 
 .flip-back {
 
   transform: rotateY(180deg);
+  background: black;
   overflow: hidden;
 
-  background: #000;
-
 }
+
+/* IMAGEN NORMAL */
 
 .flip-back img {
 
@@ -161,28 +166,131 @@ section {
 
   object-fit: contain;
 
+  border-radius: 20px;
+
+  transition: transform .5s ease;
+
+}
+
+
+
+/* TARJETA AMPLIADA */
+
+.flip-card.active {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1.4);
+
+  width: 70vw;
+  height: 70vh;
+
+  z-index: 999;
+
+}
+
+
+/* ZOOM SUAVE */
+
+.flip-card.active img {
+
+  transform: scale(1.08);
+
+}
+
+/* BOTÓN CERRAR */
+
+.close-btn {
+
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+
+  border: none;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  z-index: 50;
+
+  transition: .3s;
+
+}
+
+.close-btn:hover {
+
+  background: #00ffd5;
+  color: black;
+
 }
 
 /* RESPONSIVE */
 
-@media (max-width:900px) {
+@media(max-width:900px) {
 
   .projects-grid {
-
     grid-template-columns: 1fr;
-
   }
 
   .flip-card {
-
-    height: 320px;
-
+    height: 340px;
   }
 
   .tech-title {
-
     font-size: 40px;
+  }
 
+}
+
+/* ===== TERMINAL EFFECT ===== */
+
+.terminal-title {
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 213, 0.7),
+    0 0 20px rgba(0, 255, 213, 0.5),
+    0 0 40px rgba(0, 255, 213, 0.4);
+
+}
+
+/* cursor terminal */
+
+.cursor {
+
+  margin-left: 5px;
+
+  animation: blink 1s infinite;
+
+  color: #00ffd5;
+
+}
+
+@keyframes blink {
+
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
   }
 
 }
