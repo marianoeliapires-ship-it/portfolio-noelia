@@ -8,75 +8,74 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FUENTES */
+
 html,
 body {
   height: 100%;
   font-family: 'Inter', sans-serif;
   background: radial-gradient(circle at 20% 30%, #5a1c9c, #21003f);
   color: white;
-  overflow-x: hidden;
 }
 
+/* CONTENEDOR PRINCIPAL */
+
 main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   position: relative;
   z-index: 2;
 }
 
-/* SECCIONES A PANTALLA COMPLETA */
+/* SECCIONES */
 
 section {
   height: 100vh;
+  scroll-snap-align: start;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 80px;
+  text-align: center;
 }
 
-/* TITULOS FUTURISTAS */
+/* TITULOS TECNOLOGICOS */
 
 .tech-title {
   font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: 2px;
 }
 
-/* ESTILO CODIGO */
+/* TEXTO ESTILO CODIGO */
 
 .code-style {
   font-family: 'JetBrains Mono', monospace;
-  color: #00ffd5;
 }
 
-/* CURSOR TERMINAL */
+/* TARJETAS PROYECTOS */
 
-.cursor {
-  display: inline-block;
-  width: 10px;
-  background: #00ffd5;
-  margin-left: 5px;
-  animation: blink 1s infinite;
-}
+.project-card {
 
-@keyframes blink {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  0% {
-    opacity: 1;
-  }
+  padding: 25px;
+  border-radius: 12px;
 
-  50% {
-    opacity: 0;
-  }
+  backdrop-filter: blur(10px);
 
-  100% {
-    opacity: 1;
-  }
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
 
 }
 
-/* EFECTO GLOW TECNOLOGICO */
+.project-card:hover {
 
-.glow-text {
-  text-shadow:
-    0 0 5px #00ffd5,
-    0 0 10px #00ffd5,
-    0 0 20px #00ffd5;
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 213, 0.4),
+    0 0 40px rgba(0, 255, 213, 0.2);
+
 }

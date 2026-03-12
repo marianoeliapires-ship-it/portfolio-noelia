@@ -1,5 +1,4 @@
 import ParticlesBackground from "../components/ParticlesBackground";
-import Typewriter from "../components/Typewriter";
 
 export default function Header() {
 
@@ -16,10 +15,10 @@ export default function Header() {
                 </h1>
 
                 <h2 className="text-[28px] mt-4">
-                    <Typewriter text="> Administradora de sistemas en formación" />
+                    ADMINISTRADORA DE SISTEMAS EN FORMACIÓN
                 </h2>
 
-                <p className="mt-4 tracking-widest">
+                <p className="mt-2 tracking-widest code-style">
                     REDES · SOPORTE IT · TECNOLOGÍAS WEB
                 </p>
 
