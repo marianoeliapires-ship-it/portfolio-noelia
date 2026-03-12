@@ -8,6 +8,7 @@ import Certificaciones from "./sections/Certificaciones"
 import Metodologia from "./sections/Metodologia"
 import Contacto from "./sections/Contacto"
 
+
 function App() {
 
   return (

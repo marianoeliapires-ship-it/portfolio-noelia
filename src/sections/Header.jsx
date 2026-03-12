@@ -1,20 +1,29 @@
+import ParticlesBackground from "../components/ParticlesBackground";
+import Typewriter from "../components/Typewriter";
+
 export default function Header() {
 
     return (
 
-        <div className="text-white flex flex-col items-center justify-center text-center">
+        <div className="h-screen flex items-center justify-center text-white relative">
 
-            <h1 className="text-[80px] font-bold">
-                NOELIA PIRES
-            </h1>
+            <ParticlesBackground />
 
-            <h2 className="text-[28px] mt-4">
-                ADMINISTRADORA DE SISTEMAS EN FORMACIÓN
-            </h2>
+            <div className="relative z-10 text-center">
 
-            <p className="mt-2 tracking-widest">
-                REDES · SOPORTE IT · TECNOLOGÍAS WEB
-            </p>
+                <h1 className="text-[80px] font-bold tech-title glow-text">
+                    NOELIA PIRES
+                </h1>
+
+                <h2 className="text-[28px] mt-4">
+                    <Typewriter text="> Administradora de sistemas en formación" />
+                </h2>
+
+                <p className="mt-4 tracking-widest">
+                    REDES · SOPORTE IT · TECNOLOGÍAS WEB
+                </p>
+
+            </div>
 
         </div>
 
