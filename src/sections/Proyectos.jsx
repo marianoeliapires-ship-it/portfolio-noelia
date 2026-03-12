@@ -30,16 +30,16 @@ export default function Proyectos() {
         },
 
         {
-            titulo: "Active Directory",
+            titulo: "Active Directory - Gestión de usuarios",
             descripcion: "Administración de dominio en Windows Server.",
-            detalle: "Configuración y gestión de usuarios dentro de Active Directory.",
-            tecnologias: "Windows Server · Active Directory",
-            resultado: "Gestión de grupos y permisos.",
+            detalle: "Configuración y gestión de usuarios dentro de Active Directory en entorno de dominio.",
+            tecnologias: "Windows Server · Active Directory · Gestión de grupos y permisos",
+            resultado: "Organización estructurado de usuarios y asignación de membresías dentro del dominio",
             imagen: activeDirectory
         },
 
         {
-            titulo: "Maquetación web",
+            titulo: "Maquetación web - Tabla estructurada",
             descripcion: "Estructuración de contenido mediante tablas.",
             detalle: "Estructura de diseño y tabla web.",
             tecnologias: "HTML · CSS",
@@ -48,11 +48,11 @@ export default function Proyectos() {
         },
 
         {
-            titulo: "Formulario de compra",
-            descripcion: "Desarrollo de formulario interactivo.",
-            detalle: "Diseño con validación básica de campos.",
+            titulo: "Desarrollo Web - Formulario de compra",
+            descripcion: "Desarrollo de formulario interactivo en HTML.",
+            detalle: "Diseño y maquetación con validación básica de campos.",
             tecnologias: "HTML · CSS",
-            resultado: "Recopilación de datos y navegación entre páginas.",
+            resultado: "Estructura funcional con recopilación de datos y navegación entre páginas.",
             imagen: formularioHtml
         }
 
@@ -88,7 +88,7 @@ export default function Proyectos() {
 
                                 <h3>{p.titulo}</h3>
 
-                                <p>{p.descripcion}</p>
+                                <p className="project-subtitle">{p.descripcion}</p>
 
                                 <p>
                                     <strong>Descripción:</strong> {p.detalle}
@@ -106,7 +106,7 @@ export default function Proyectos() {
 
                             <div className="flip-back">
 
-                                <img src={p.imagen} />
+                                <img src={p.imagen} alt={p.titulo} />
 
                             </div>
 
