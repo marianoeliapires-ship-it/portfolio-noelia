@@ -16,7 +16,9 @@ export default function Header() {
 
             i++;
 
-            if (i > text.length) clearInterval(typing);
+            if (i > text.length) {
+                clearInterval(typing);
+            }
 
         }, 120);
 
@@ -32,7 +34,7 @@ export default function Header() {
 
             <div className="relative z-10 text-center">
 
-                <h1 className="text-[80px] font-bold tech-title glow-text terminal-title">
+                <h1 className="text-[80px] font-bold tech-title terminal-title">
 
                     {displayText}
                     <span className="cursor">|</span>
@@ -51,6 +53,6 @@ export default function Header() {
 
         </div>
 
-    );
+    )
 
 }

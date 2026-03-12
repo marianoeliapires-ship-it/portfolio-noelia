@@ -294,3 +294,576 @@ section {
   }
 
 }
+
+/* TERMINAL TITLE */
+
+.terminal-title {
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 213, 0.8),
+    0 0 20px rgba(0, 255, 213, 0.6),
+    0 0 40px rgba(0, 255, 213, 0.4);
+
+}
+
+/* CURSOR TERMINAL */
+
+.cursor {
+
+  margin-left: 6px;
+
+  color: #00ffd5;
+
+  animation: blink 1s infinite;
+
+}
+
+@keyframes blink {
+
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+
+}
+
+/* TERMINAL TITLE */
+
+.terminal-title {
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 213, 0.8),
+    0 0 20px rgba(0, 255, 213, 0.6),
+    0 0 40px rgba(0, 255, 213, 0.4);
+
+}
+
+/* CURSOR TERMINAL */
+
+.cursor {
+
+  margin-left: 6px;
+
+  color: #00ffd5;
+
+  animation: blink 1s infinite;
+
+}
+
+@keyframes blink {
+
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+
+}
+
+/* MOVIMIENTO SUAVE HEADER */
+
+.terminal-title {
+
+  animation:
+    float 6s ease-in-out infinite;
+
+}
+
+/* animación flotante */
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* ===== PERFIL TECNICO LAYOUT ===== */
+
+.perfil-section {
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+}
+
+.perfil-container {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  max-width: 1200px;
+
+  align-items: center;
+
+}
+
+/* TEXTO */
+
+.perfil-texto {
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  text-align: left;
+
+}
+
+/* FOTO */
+
+.perfil-imagen {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.perfil-imagen img {
+
+  width: 320px;
+
+  border-radius: 20px;
+
+  transition: all .4s ease;
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 213, 0.6),
+    0 0 40px rgba(0, 255, 213, 0.3);
+
+}
+
+/* ===== 1 FLOAT MOTION ===== */
+
+.float-element {
+
+  animation: floatMotion 6s ease-in-out infinite;
+
+}
+
+@keyframes floatMotion {
+
+  0% {
+    transform: translateY(0px)
+  }
+
+  50% {
+    transform: translateY(-12px)
+  }
+
+  100% {
+    transform: translateY(0px)
+  }
+
+}
+
+/* ===== 2 MATERIAL LIFT HOVER ===== */
+
+.lift-hover img:hover {
+
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow:
+    0 10px 40px rgba(0, 255, 213, 0.5),
+    0 0 30px rgba(0, 255, 213, 0.3);
+
+}
+
+/* ===== 3 FADE IN ===== */
+
+.fade-in-element {
+
+  animation: fadeIn 1.2s ease forwards;
+
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+/* ===== 4 PARALLAX DRIFT ===== */
+
+.drift-element {
+
+  animation: drift 12s ease-in-out infinite;
+
+}
+
+@keyframes drift {
+
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px) {
+
+  .perfil-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .perfil-texto {
+    text-align: center;
+  }
+
+}
+
+/* PERFIL TECNICO */
+
+.perfil-container {
+
+  display: grid;
+
+  grid-template-columns: 1.3fr 0.7fr;
+
+  gap: 80px;
+
+  max-width: 1200px;
+
+  align-items: center;
+
+}
+
+/* TITULO */
+
+.perfil-title {
+
+  font-size: 48px;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 3px;
+
+  text-align: left;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 213, 0.5),
+    0 0 20px rgba(0, 255, 213, 0.3);
+
+}
+
+/* LINEA TECH */
+
+.perfil-title::after {
+
+  content: "";
+
+  display: block;
+
+  width: 100px;
+
+  height: 3px;
+
+  margin-top: 14px;
+
+  background: #00ffd5;
+
+  box-shadow: 0 0 10px #00ffd5;
+
+}
+
+/* TEXTO */
+
+.perfil-parrafo {
+
+  font-size: 20px;
+
+  line-height: 1.9;
+
+  opacity: 0.9;
+
+  text-align: left;
+
+  max-width: 650px;
+
+}
+
+/* FOTO */
+
+.perfil-imagen img {
+
+  width: 260px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 213, 0.5),
+    0 0 30px rgba(0, 255, 213, 0.2);
+
+}
+
+/* ANIMACION SUAVE */
+
+.float-element {
+
+  animation: floatMotion 8s ease-in-out infinite;
+
+}
+
+@keyframes floatMotion {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(60px);
+
+  transition: all 1.2s ease;
+
+}
+
+.reveal.show {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+/* PERFIL TEXTO BOX */
+
+.perfil-texto-container {
+  max-width: 600px;
+}
+
+.perfil-title {
+  font-size: 36px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* CAJA TEXTO */
+
+.perfil-box {
+
+  position: relative;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+
+}
+
+/* TEXTO JUSTIFICADO */
+
+.perfil-parrafo {
+
+  text-align: justify;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+/* ESQUINAS DECORATIVAS */
+
+.perfil-box::before,
+.perfil-box::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #00ffd5;
+
+}
+
+.perfil-box::before {
+
+  top: -10px;
+  left: -10px;
+
+  border-right: none;
+  border-bottom: none;
+
+}
+
+.perfil-box::after {
+
+  bottom: -10px;
+  right: -10px;
+
+  border-left: none;
+  border-top: none;
+
+}
+
+/* TARJETA FOTO */
+
+.perfil-card {
+
+  width: 260px;
+  height: 320px;
+
+  perspective: 1000px;
+
+}
+
+.perfil-card-inner {
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition: transform .8s;
+
+}
+
+/* GIRO */
+
+.perfil-card:hover .perfil-card-inner {
+
+  transform: rotateY(180deg);
+
+}
+
+/* CARAS */
+
+.perfil-card-front,
+.perfil-card-back {
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 213, .5);
+
+}
+
+.perfil-card-front img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+.perfil-card-back {
+
+  transform: rotateY(180deg);
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.perfil-card-back img {
+
+  width: 90%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+
+  .perfil-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+  .perfil-title {
+    text-align: center;
+  }
+
+}
