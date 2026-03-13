@@ -1,31 +1,76 @@
-export default function Metodologia() {
+import React, { useEffect, useRef } from "react";
+import "../styles/metodologia.css";
+
+function Metodologia() {
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("metodo-visible")
+
+                    }
+
+                })
+
+            },
+
+            { threshold: 0.4 }
+
+        )
+
+        observer.observe(ref.current)
+
+    }, [])
 
     return (
 
-        <section className="h-screen flex flex-col items-center justify-center text-white text-center px-10">
+        <section className="metodologia" ref={ref}>
 
-            <h2 className="text-4xl font-bold mb-10">
+            <h2 className="metodo-titulo">
                 7. Metodología de Trabajo
             </h2>
 
-            <p className="text-xl mb-6">
-                Trabajo por fases: planificación → ejecución → verificación → documentación
-            </p>
+            <div className="metodo-linea">
 
-            <p className="mb-4">
-                Consulta de documentación oficial antes de aplicar configuraciones o tecnologías.
-            </p>
+                <div className="paso">
+                    <div className="circulo">🧠</div>
+                    <h3>Planificación</h3>
+                    <p>Consulta de documentación oficial antes de aplicar configuraciones o tecnologías.</p>
+                </div>
 
-            <p className="mb-4">
-                Desarrollo por iteraciones cortas con objetivos claros y entregables funcionales.
-            </p>
+                <div className="paso">
+                    <div className="circulo">⚙️</div>
+                    <h3>Ejecución</h3>
+                    <p>Desarrollo por iteraciones cortas con objetivos claros y entregables funcionales.</p>
+                </div>
 
-            <p className="mb-4">
-                Priorización de estabilidad y funcionalidad antes que optimización visual o mejoras secundarias.
-            </p>
+                <div className="paso">
+                    <div className="circulo">🔎</div>
+                    <h3>Verificación</h3>
+                    <p>Validación de configuraciones y comprobación del funcionamiento correcto.</p>
+                </div>
 
-            <p className="italic mt-6">
-                "Mi enfoque es comprender antes de ejecutar, validar antes de entregar y documentar para mantener."
+                <div className="paso">
+                    <div className="circulo">📄</div>
+                    <h3>Documentación</h3>
+                    <p>Registro de configuraciones, incidencias y soluciones para mantenimiento futuro.</p>
+                </div>
+
+            </div>
+
+            <p className="metodo-frase">
+                <span className="typewriter">
+                    Mi enfoque es comprender antes de ejecutar, validar antes de entregar y documentar para mantener
+                </span>
             </p>
 
         </section>
@@ -33,3 +78,5 @@ export default function Metodologia() {
     )
 
 }
+
+export default Metodologia
