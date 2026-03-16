@@ -1,29 +1,66 @@
-export default function Certificaciones() {
+import React from "react";
+import "../styles/certificaciones.css";
+
+function Certificaciones() {
 
     return (
 
-        <section className="h-screen flex flex-col items-center justify-center text-white text-center">
+        <section className="certificaciones">
 
-            <h2 className="text-4xl font-bold mb-10">
+            <h2 className="titulo-cert">
                 6. Certificaciones y Cursos
             </h2>
 
-            <ul className="space-y-4 text-lg">
+            <p className="subtitulo-cert">
+                Formación técnica y especialización en sistemas y tecnología
+            </p>
 
-                <li>Cisco Certified CCST Cybersecurity</li>
+            <div className="cert-container">
 
-                <li>Cisco Certified CCST Networking</li>
+                {/* CERTIFICACIONES */}
 
-                <li>IT Specialist Databases – Pearson</li>
+                <div className="certificaciones-row">
 
-                <li>PRL (Prevención de Riesgos Laborales)</li>
+                    <div className="cert-node">
+                        <img src="/certificaciones/ccst-network.jpg" alt="CCST Networking" />
+                        <p>CCST Networking</p>
+                    </div>
 
-                <li>Igualdad de oportunidades – Instituto Asturiano de la Mujer</li>
+                    <div className="cert-node">
+                        <img src="/certificaciones/ccst_cybersecurity_xl.jpg" alt="CCST Cybersecurity" />
+                        <p>CCST Cybersecurity</p>
+                    </div>
 
-            </ul>
+                    <div className="cert-node">
+                        <img src="/certificaciones/databases.png" alt="Databases" />
+                        <p>Databases</p>
+                    </div>
+
+                </div>
+
+
+                {/* CURSOS */}
+
+                <div className="courses-row">
+
+                    <div className="course-node">
+                        <span>🦺</span>
+                        <p>PRL</p>
+                    </div>
+
+                    <div className="course-node">
+                        <span>⚖️</span>
+                        <p>Igualdad</p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
-    )
+    );
 
 }
+
+export default Certificaciones;
