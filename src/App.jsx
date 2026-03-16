@@ -8,50 +8,58 @@ import Certificaciones from "./sections/Certificaciones"
 import Metodologia from "./sections/Metodologia"
 import Contacto from "./sections/Contacto"
 
+import ThemeToggle from "./components/ThemeToggle"
 
 function App() {
 
   return (
 
-    <main>
+    <>
 
-      <section>
-        <Header />
-      </section>
+      {/* BOTÓN DARK / LIGHT */}
+      <ThemeToggle />
 
-      <section>
-        <PerfilTecnico />
-      </section>
+      <main>
 
-      <section>
-        <Competencias />
-      </section>
+        <section>
+          <Header />
+        </section>
 
-      <section>
-        <Herramientas />
-      </section>
+        <section>
+          <PerfilTecnico />
+        </section>
 
-      <section>
-        <Proyectos />
-      </section>
+        <section>
+          <Competencias />
+        </section>
 
-      <section>
-        <Experiencia />
-      </section>
+        <section>
+          <Herramientas />
+        </section>
 
-      <section>
-        <Certificaciones />
-      </section>
+        <section>
+          <Proyectos />
+        </section>
 
-      <section>
-        <Metodologia />
-      </section>
+        <section>
+          <Experiencia />
+        </section>
 
-      <section>
-        <Contacto />
-      </section>
+        <section>
+          <Certificaciones />
+        </section>
 
-    </main>
+        <section>
+          <Metodologia />
+        </section>
+
+        <section>
+          <Contacto />
+        </section>
+
+      </main>
+
+    </>
 
   )
 

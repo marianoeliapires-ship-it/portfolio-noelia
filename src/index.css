@@ -1936,3 +1936,154 @@ h6 {
 .project-subtitle {
   margin-bottom: 10px;
 }
+
+
+/* =========================
+   DARK / LIGHT MODE FIX
+========================= */
+
+/* modo oscuro (por defecto) */
+html.dark body {
+  background: radial-gradient(circle at 20% 30%, #5a1c9c, #21003f);
+  color: white;
+}
+
+/* modo claro */
+html.light body {
+  background: #f6f7fb;
+  color: #111;
+}
+
+/* tarjetas en modo claro */
+html.light .perfil-card,
+html.light .competencia-card,
+html.light .flip-front {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* títulos en claro */
+html.light h1,
+html.light h2,
+html.light h3 {
+  color: #111;
+}
+
+/* =========================
+   LIGHT MODE MORADO
+========================= */
+
+html.light body {
+
+  background:
+    radial-gradient(circle at 20% 30%, #c9b3ff, #7a4cff);
+
+  color: #0f0f0f;
+
+}
+
+/* título principal */
+
+html.light .terminal-title {
+
+  color: #0a0a0a;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 213, .6),
+    0 0 20px rgba(0, 255, 213, .4),
+    0 0 40px rgba(0, 255, 213, .2);
+
+}
+
+/* subtitulo */
+
+html.light h2,
+html.light h3,
+html.light p {
+
+  color: #1a1a1a;
+
+}
+
+/* tarjetas */
+
+html.light .perfil-card,
+html.light .competencia-card,
+html.light .flip-front {
+
+  background: rgba(255, 255, 255, .55);
+
+  border: 1px solid rgba(0, 0, 0, .1);
+
+  backdrop-filter: blur(10px);
+
+}
+
+/* lineas neon */
+
+html.light .perfil-title::after,
+html.light .competencias-title::after {
+
+  background: #00eaff;
+
+}
+
+
+/* =========================
+   FIX CONTRASTE MODO CLARO
+========================= */
+
+/* TITULOS */
+
+html.light h1,
+html.light h2,
+html.light h3,
+html.light .section-title,
+html.light .perfil-title,
+html.light .competencias-title {
+
+  color: #0b0b0b !important;
+
+}
+
+/* TEXTO NORMAL */
+
+html.light p,
+html.light span,
+html.light li {
+
+  color: #111 !important;
+
+}
+
+/* TEXTO DE METODOLOGÍA */
+
+html.light .metodologia-section p {
+
+  color: #111 !important;
+
+}
+
+/* TEXTO DE LOS PASOS */
+
+html.light .metodologia-step {
+
+  color: #111 !important;
+
+}
+
+/* TEXTO AZUL FINAL */
+
+html.light .metodologia-frase {
+
+  color: #007c8a !important;
+
+}
+
+/* ICONOS */
+
+html.light .metodologia-icon {
+
+  filter: brightness(0.8);
+
+}
