@@ -1,37 +1,102 @@
-export default function Experiencia() {
+import React from "react";
+import "../styles/experiencia.css";
+
+function Experiencia() {
 
     return (
 
-        <section className="h-screen flex flex-col items-center justify-center text-white px-10">
+        <section className="experiencia">
 
-            <h2 className="text-4xl font-bold mb-10 text-center">
-                5. Experiencia & Soporte IT
+            <h2 className="titulo-experiencia">
+                5. EXPERIENCIA & SOPORTE IT
             </h2>
 
-            <div className="max-w-4xl space-y-6">
+            <p className="subtitulo-experiencia">
+                Atención al usuario · Resolución de incidencias · Trabajo estructurado
+            </p>
 
-                <p>
-                    <strong>Resolutions Generalist – IKEA (2025)</strong><br />
-                    • Gestión y resolución de incidencias.<br />
-                    • Registro y seguimiento de casos mediante herramientas digitales.<br />
-                    • Comunicación directa con clientes en situaciones complejas.
-                </p>
 
-                <p>
-                    <strong>Dependienta y atención al cliente – Cinesa (2014–2025)</strong><br />
-                    • Trabajo en entornos exigentes.<br />
-                    • Aplicación de procedimientos establecidos.<br />
-                    • Coordinación con equipos y resolución de problemas en tiempo real.
-                </p>
+            <div className="orbital-layout">
 
-                <p className="italic text-center mt-6">
-                    "En entornos técnicos, combino base en sistemas con capacidad de comunicación y resolución estructurada de incidencias."
-                </p>
+
+                {/* EXPERIENCIA */}
+
+                <div className="lado experiencia-izquierda">
+
+                    <div className="bloque">
+
+                        <p className="rol">Resolutions Generalist</p>
+                        <p className="empresa">IKEA · 2025</p>
+
+                        <ul className="tareas">
+                            <li>Gestión y resolución de incidencias</li>
+                            <li>Registro y seguimiento de casos mediante herramientas digitales</li>
+                            <li>Comunicación directa con clientes en situaciones complejas</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div className="bloque">
+
+                        <p className="rol">Dependienta · Atención al cliente</p>
+                        <p className="empresa">Cinesa · 2014–2025</p>
+
+                        <ul className="tareas">
+                            <li>Trabajo en entornos exigentes</li>
+                            <li>Aplicación de procedimientos establecidos</li>
+                            <li>Coordinación con equipos y resolución de problemas en tiempo real</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                {/* NÚCLEO CENTRAL */}
+
+                <div className="nucleo">
+
+                    <div className="halo"></div>
+                    <div className="core"></div>
+
+                </div>
+
+
+                {/* SOPORTE IT */}
+
+                <div className="lado experiencia-derecha">
+
+                    <div className="bloque">
+
+                        <p className="rol">Soporte IT</p>
+                        <p className="empresa">Competencias aplicadas al soporte técnico</p>
+
+                        <ul className="tareas soporte">
+                            <li>Diagnóstico estructurado de problemas</li>
+                            <li>Priorización y organización de tareas</li>
+                            <li>Comunicación clara con el usuario</li>
+                            <li>Adaptación a nuevas herramientas</li>
+                            <li>Trabajo siguiendo documentación y procesos</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
+
+            <p className="frase-experiencia">
+                “En entornos técnicos, combino base en sistemas con capacidad de comunicación y resolución estructurada de incidencias.”
+            </p>
+
+
         </section>
 
-    )
+    );
 
 }
+
+export default Experiencia;
