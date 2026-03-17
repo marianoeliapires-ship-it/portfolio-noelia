@@ -84,9 +84,7 @@ function Experiencia() {
             </div>
 
 
-            <p className="frase-experiencia">
-                “En entornos técnicos, combino base en sistemas con capacidad de comunicación y resolución estructurada de incidencias.”
-            </p>
+
 
         </section>
 

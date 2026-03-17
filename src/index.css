@@ -2087,3 +2087,90 @@ html.light .metodologia-icon {
   filter: brightness(0.8);
 
 }
+
+/* =========================
+   FIX FINAL HEADER (NOELIA)
+========================= */
+
+h1.terminal-title {
+
+  font-size: clamp(4rem, 7vw, 7rem) !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 4px !important;
+
+  text-align: center !important;
+
+  color: #ffffff !important;
+
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(0, 255, 213, 0.8),
+    0 0 28px rgba(0, 255, 213, 0.6) !important;
+
+  animation: none !important;
+  /* quitamos el float que tenías */
+}
+
+/* cursor limpio */
+h1.terminal-title .cursor {
+  margin-left: 6px;
+  color: #00ffd5;
+  animation: blink 1s infinite;
+}
+
+/* =========================
+   FIX TITULOS GLOBAL (SIN HEADER)
+========================= */
+
+/* TODOS los títulos EXCEPTO el header */
+h1:not(.terminal-title),
+h2,
+.section-title,
+.perfil-title,
+.competencias-title {
+
+  font-family: 'Space Grotesk', sans-serif !important;
+
+  font-size: clamp(2.2rem, 3vw, 3rem) !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.5px !important;
+
+  text-align: center !important;
+
+  color: #c4b5fd !important;
+
+  margin-bottom: 2rem !important;
+
+  text-shadow:
+    0 0 10px rgba(139, 92, 246, 0.4),
+    0 0 20px rgba(139, 92, 246, 0.2) !important;
+}
+
+/* línea decorativa uniforme */
+h1:not(.terminal-title)::after,
+h2::after,
+.section-title::after,
+.perfil-title::after,
+.competencias-title::after {
+
+  content: "" !important;
+
+  display: block !important;
+
+  margin: 0.6rem auto 0 !important;
+
+  width: 60px !important;
+
+  height: 2px !important;
+
+  background: linear-gradient(90deg,
+      transparent,
+      #8b5cf6,
+      transparent) !important;
+
+  opacity: 0.7 !important;
+}
