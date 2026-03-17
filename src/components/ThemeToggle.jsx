@@ -34,7 +34,7 @@ export default function ThemeToggle() {
             style={{
                 position: "fixed",
                 top: "20px",
-                right: "20px",
+                left: "20px",   // 🔥 SOLO ESTE CAMBIO
                 zIndex: 9999,
                 padding: "10px 16px",
                 borderRadius: "20px",
