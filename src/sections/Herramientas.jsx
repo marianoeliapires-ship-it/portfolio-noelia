@@ -1,56 +1,79 @@
+import Reveal from "../components/reveal";
+import "../styles/3ctecnicas.css";
+
 export default function Herramientas() {
-
     return (
+        <section className="min-h-screen flex justify-center text-white px-6 pt-20 pb-20">
+            <div className="c3-container">
 
-        <section className="h-screen flex items-center justify-center text-white px-10">
+                <Reveal>
+                    <h2 className="c3-title">3. Competencias Técnicas</h2>
+                </Reveal>
 
-            <div className="max-w-[900px]">
+                <div className="c3-layout">
 
-                <h2 className="text-4xl font-bold mb-8">
-                    3. Herramientas
-                </h2>
+                    
 
-                <h3 className="text-2xl font-semibold mt-6 mb-3">
-                    Administración de Sistemas
-                </h3>
+                    {/* IZQUIERDA */}
+                    <div className="c3-side">
 
-                <ul className="space-y-1">
-                    <li>CMD</li>
-                    <li>Powershell</li>
-                    <li>Active Directory</li>
-                    <li>Windows Server</li>
-                </ul>
+                        <Reveal>
+                            <div className="c3-block">
+                                <h3>Administración de Sistemas</h3>
+                                <ul>
+                                    <li>CMD</li>
+                                    <li>Powershell</li>
+                                    <li>Active Directory</li>
+                                    <li>Windows Server</li>
+                                </ul>
+                            </div>
+                        </Reveal>
 
-                <h3 className="text-2xl font-semibold mt-6 mb-3">
-                    Redes
-                </h3>
+                        <Reveal>
+                            <div className="c3-block">
+                                <h3>Redes</h3>
+                                <ul>
+                                    <li>Configuración TCP/IP</li>
+                                    <li>DNS / DHCP</li>
+                                    <li>DHCP</li>
+                                </ul>
+                            </div>
+                        </Reveal>
 
-                <ul className="space-y-1">
-                    <li>Configuración TCP/IP</li>
-                    <li>DNS / DHCP</li>
-                    <li>DHCP</li>
-                </ul>
+                    </div>
 
-                <h3 className="text-2xl font-semibold mt-6 mb-3">
-                    Virtualización
-                </h3>
+                    {/* CENTRO */}
+                    <div className="c3-core">
+                        <div className="c3-node">
+                            <img src="/src/assets/tools.png" alt="core" />
+                        </div>
+                    </div>
 
-                <ul className="space-y-1">
-                    <li>VirtualBox</li>
-                </ul>
+                    {/* DERECHA */}
+                    <div className="c3-side">
 
-                <h3 className="text-2xl font-semibold mt-6 mb-3">
-                    Soporte Remoto
-                </h3>
+                        <Reveal>
+                            <div className="c3-block">
+                                <h3>Virtualización</h3>
+                                <ul>
+                                    <li>VirtualBox</li>
+                                </ul>
+                            </div>
+                        </Reveal>
 
-                <ul className="space-y-1">
-                    <li>Escritorio Remoto</li>
-                </ul>
+                        <Reveal>
+                            <div className="c3-block">
+                                <h3>Soporte Remoto</h3>
+                                <ul>
+                                    <li>Escritorio Remoto</li>
+                                </ul>
+                            </div>
+                        </Reveal>
 
+                    </div>
+
+                </div>
             </div>
-
         </section>
-
-    )
-
+    );
 }

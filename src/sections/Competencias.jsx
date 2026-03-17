@@ -15,7 +15,7 @@ const competencias = [
         titulo: "Redes",
         imagen: redes,
         claseImagen: "img-redes",
-        items: ["Configuración TCP/IP", "DNS", "DHCP", "Resolución de incidencias"],
+        items: ["Configuración TCP/IP", "DNS", "DHCP"],
     },
     {
         titulo: "Virtualización",
@@ -35,7 +35,7 @@ const Competencias = () => {
     return (
         <section id="competencias" className="competencias-section">
             <div className="competencias-header">
-                <h2 className="competencias-title">2. Competencias Técnicas</h2>
+                <h2 className="competencias-title">2. Herramientas</h2>
             </div>
 
             <div className="competencias-grid">
